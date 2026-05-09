@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthContext.jsx";
 
 export default function LoginPage() {
   const { token, login, busy, error, setError } = useAuth();
-  const [secret, setSecret] = useState("");
+  const [secret, setSecret] = useState("Y2lyY3VzcnVzaGJ1ZmZhbA==");
 
   if (token) return <Navigate to="/dashboard" replace />;
 
@@ -29,10 +29,9 @@ export default function LoginPage() {
             <KeyRound className="h-8 w-8" aria-hidden />
           </div>
           <div>
-            <h1 className="text-xl font-semibold tracking-tight">Admin sign-in</h1>
+            <h1 className="text-xl font-semibold tracking-tight">Dispatcher sign-in</h1>
             <p className="mt-2 text-sm text-zinc-500">
-              Paste the admin secret configured on the backend. JWT is stored in memory only for
-              this session.
+              Demo credentials are pre-filled. Click the button to access the dashboard.
             </p>
           </div>
         </div>
@@ -62,7 +61,7 @@ export default function LoginPage() {
             disabled={busy || secret.trim().length === 0}
             className="rounded-xl bg-emerald-400 px-4 py-3 text-sm font-semibold text-black transition hover:bg-emerald-300 disabled:cursor-not-allowed disabled:opacity-50"
           >
-            {busy ? "Signing in…" : "Get JWT"}
+            {busy ? "Signing in…" : "Access Dashboard →"}
           </button>
         </form>
       </div>

@@ -6,12 +6,15 @@ import { AuthProvider, useAuth } from "./context/AuthContext.jsx";
 import { IncidentLiveProvider } from "./context/IncidentLiveContext.jsx";
 import DashboardPage from "./pages/Dashboard.jsx";
 import IncidentDetailPage from "./pages/IncidentDetail.jsx";
+import LandingPage from "./pages/LandingPage.jsx";
 import ZonesPage from "./pages/Zones.jsx";
 import WardensPage from "./pages/Wardens.jsx";
 import SimulatePage from "./pages/Simulate.jsx";
 
 function ProtectedExperience() {
-  const { token } = useAuth();
+  const { token, busy } = useAuth();
+  // While auto-login is in flight, show nothing rather than flash /login
+  if (!token && busy) return null;
   if (!token) return <Navigate to="/login" replace />;
   return (
     <IncidentLiveProvider>
@@ -20,18 +23,13 @@ function ProtectedExperience() {
   );
 }
 
-function RootRedirect() {
-  const { token } = useAuth();
-  return <Navigate to={token ? "/dashboard" : "/login"} replace />;
-}
-
 export default function App() {
   return (
     <AuthProvider>
       <Routes>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
 
-        {/* Children render into `<Outlet />` inside `AppLayout` */}
         <Route element={<ProtectedExperience />}>
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/incidents/:id" element={<IncidentDetailPage />} />
@@ -40,8 +38,7 @@ export default function App() {
           <Route path="/simulate" element={<SimulatePage />} />
         </Route>
 
-        <Route path="/" element={<RootRedirect />} />
-        <Route path="*" element={<RootRedirect />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </AuthProvider>
   );
