@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Internal docs — not for public repo
+HACKATHON-CHECKLIST.md
+frontend-spec.md
