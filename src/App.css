@@ -19,6 +19,11 @@ img::selection {
   -webkit-user-drag: none;
 }
 
+input::selection{
+ color: #000;
+ background: var(--pry);
+}
+
 .LaunchSpace {
   /* background: linear-gradient(#394046, #1b1c20);
   background-color: #394046; */

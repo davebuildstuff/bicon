@@ -237,10 +237,10 @@ function App() {
             <span className="text-lime-500">anywhere in the world</span></div>
               <div className="form py-4 flex flex-col gap-2  items-start">
             <div className="input border p-2 flex items-center gap-4 border-[#9c9c9c]/30 w-full max-w-[350px] ">
-             <Mail size={20 } /> <input className="outline-none text-sm" type="email" placeholder="Your email address" />
+             <Mail size={20 } /> <input className="outline-none w-full text-sm" type="email" placeholder="Your email address" />
             </div>
             <div className="input border p-2 flex items-center gap-4 border-[#9c9c9c]/30 w-full max-w-[350px] ">
-             <Asterisk size={20 } /> <input className="outline-none text-sm" type="password" placeholder="Create a password " />
+             <Asterisk size={20 } /> <input className="outline-none w-full text-sm" type="password" placeholder="Create a password " />
             </div>
 
             <button className="sign-up w-full max-w-[350px] font-semibold bg-white text-black p-4">Sign Up</button>
