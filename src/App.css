@@ -3,8 +3,9 @@
 }
 
 :root {
-  --pry: rgb(183, 255, 59);
+  --pry: #b7ff3b;
 }
+
 a::selection,
 img::selection {
   user-select: none;
