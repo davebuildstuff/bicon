@@ -39,7 +39,7 @@ export default function SimulatePage() {
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-white">Hackathon demos</h1>
         <p className="mt-2 text-sm text-zinc-500">
-          Each POST is <code className="text-xs text-emerald-300">202 Accepted</code> with a plain JSON body —
+          Each POST is <code className="text-xs text-grn">202 Accepted</code> with a plain JSON body —
           observe WebSocket choreography on the dashboard while jobs flow through queues.
         </p>
       </header>
@@ -63,7 +63,7 @@ export default function SimulatePage() {
                 value={String(id)}
                 checked={version === /** @type {"v1"|"v2"|"none"} */ (id)}
                 onChange={() => setVersion(/** @type {"v1"|"v2"|"none"} */ (id))}
-                className="accent-emerald-400"
+                className="accent-grn"
               />
               <span className="text-zinc-200">{title}</span>
             </label>

@@ -484,7 +484,7 @@ function ActionBtn({ label, onClick, busy, variant = "solid" }) {
   const cls =
     variant === "ghost"
       ? "border-white/15 bg-transparent text-white hover:bg-white/5"
-      : "bg-emerald-400 text-black hover:bg-emerald-300";
+      : "bg-grn text-black hover:bg-emerald-300";
   return (
     <button
       type="button"

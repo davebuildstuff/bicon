@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
+import logo from "../assets/images/logo-06.svg"
 import {
   LayoutDashboard,
   MapPinned,
@@ -21,12 +22,11 @@ export default function AppLayout() {
   return (
     <div className="flex min-h-screen bg-zinc-950 text-zinc-100">
       <aside className="flex w-56 shrink-0 flex-col border-r border-white/10 bg-black/40">
-        <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
-          <Shield className="h-8 w-8 text-emerald-400" aria-hidden />
-          <div className="leading-tight">
-            <div className="text-sm font-semibold tracking-wide">Bicon</div>
+        <div className="flex flex-col gap-2 border-b border-white/10 px-5 py-4">
+        <img src={logo} alt="" className="logo w-full max-w-[80%]" />
             <div className="text-[11px] text-zinc-500">Dispatcher console</div>
-          </div>
+
+         
         </div>
         <nav className="flex flex-1 flex-col gap-1 p-3">
           {nav.map(({ to, label, icon: Icon }) => (

@@ -194,7 +194,7 @@ export default function WardensPage() {
           </label>
           <button
             type="submit"
-            className="w-full rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-black transition hover:bg-emerald-300"
+            className="w-full rounded-xl bg-grn px-4 py-2 text-sm font-semibold text-black transition "
           >
             Submit registration
           </button>

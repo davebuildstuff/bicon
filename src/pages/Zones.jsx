@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState, lazy, Suspense } from "react";
 import { ApiError, api, apiDeleteZones } from "../lib/api.js";
 import { getIncidentSocket } from "../lib/socket.js";
+import { Plus } from "lucide-react";
 
 const BiconMap = lazy(() => import("../components/BiconMap.jsx"));
 
@@ -229,8 +230,9 @@ export default function ZonesPage() {
           ) : null}
           <button
             type="submit"
-            className="w-full rounded-xl bg-emerald-400 px-4 py-2 text-sm font-semibold text-black transition hover:bg-emerald-300"
+            className="w-full flex items-center gap-2 justify-center rounded-xl bg-grn px-4 py-2 text-sm font-semibold text-black transition hover:bg-emerald-300"
           >
+           <Plus />
             Create zone
           </button>
         </form>

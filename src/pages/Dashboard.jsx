@@ -307,7 +307,7 @@ export default function DashboardPage() {
               ),
             )}
             <span className="flex items-center gap-1.5">
-              <span className="inline-block h-2.5 w-2.5 rounded-full border border-emerald-400/60 bg-emerald-500/20" />
+              <span className="inline-block h-2.5 w-2.5 rounded-full border border-grn/60 bg-grn/20" />
               Zone boundary
             </span>
           </div>
@@ -319,7 +319,7 @@ export default function DashboardPage() {
             <h2 className="text-lg font-semibold text-zinc-200">Incident feed</h2>
             <button
               type="button"
-              className="text-xs font-medium text-emerald-400 hover:text-emerald-300"
+              className="text-xs font-medium text-grn hover:text-grn"
               onClick={() => {
                 void loadIncidents();
                 void refreshKpis();
@@ -369,7 +369,7 @@ function KpiTile({ title, value, icon: Icon, hint }) {
         <div className="text-[11px] font-semibold uppercase tracking-wide text-zinc-500">
           {title}
         </div>
-        <Icon className="h-4 w-4 text-emerald-400/80" aria-hidden />
+        <Icon className="h-4 w-4 text-grn/80" aria-hidden />
       </div>
       <div className="mt-3 text-3xl font-semibold tabular-nums text-white">{value}</div>
       {hint ? <div className="mt-2 text-[11px] text-zinc-600">{hint}</div> : null}
